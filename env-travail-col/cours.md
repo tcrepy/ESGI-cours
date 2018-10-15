@@ -26,5 +26,5 @@ ssh
 
 ### Signer ses commits avec GPG
 
-clé GPG [documentation](https://medium.com/@timmywil/sign-your-commits-on-github-with-gpg-566f07762a43)
+clé GPG : [lier avec github](https://medium.com/@timmywil/sign-your-commits-on-github-with-gpg-566f07762a43)
     
