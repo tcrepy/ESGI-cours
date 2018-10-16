@@ -5,15 +5,15 @@ Environnement de travail collaboratif
 ssh
 --
 ---
-## Génération de la clé ssh
+### Génération de la clé ssh
 
     ssh-keygen
 
-## copie de la clé sur le serveur
+### copie de la clé sur le serveur
 
     ssh-copy-id -i ~/.ssh/id_rsa.pub user@server
 
-## ajouter un raccourci de connexion ssh
+### ajouter un raccourci de connexion ssh
 
 
     nano ~/.ssh/config
@@ -28,16 +28,15 @@ ssh
     ssh {name}
 
 
-## Signer ses commits avec GPG
+### Signer ses commits avec GPG
 
 clé GPG : [lier avec github](https://medium.com/@timmywil/sign-your-commits-on-github-with-gpg-566f07762a43)
 
 
-
 PR et issues
+--
 ---
----
-## Issues templates
+### Issues templates
 
 Sur github, on peut selectionner un template d'issues
 
@@ -49,4 +48,4 @@ On peut passer par l'interface web, ou sinon créer un dossier ``docs`` ou ``.gi
 
 soit on a un seul template ``issue_template.md``
 
-ou sinon on met les différents templates dans un dossier ``ÌSSUE_TEMPLATE/``
+ou sinon on met les différents templates dans un dossier ``ÌSSUE_TEMPLATE/`` et on link sur une nouvelle issues avec en paramètre GET  ``?template={template_name.md}``
