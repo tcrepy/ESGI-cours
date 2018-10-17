@@ -768,7 +768,7 @@ body p {
 }
 
 @media print {
-  body[data-theme="default"] {
+  body[data-theme="white"] {
     color: #000;
     background-color: #fff;
   }
@@ -860,12 +860,54 @@ docker start {container_id}
 
 #démarage du bash 
 docker exec -ti {container_id} bash
+
+#pour sortir
+exit
+
+#eteindre le container
+docker stop {container_id} 
 </code></pre>
-<p data-line="116">pour lister les images presentes sur le pc</p>
+<p data-line="122">pour lister les images presentes sur le pc</p>
 <pre><code>docker images
 </code></pre>
-<p data-line="120">pour pull une image</p>
+<p data-line="126">pour pull une image</p>
 <pre><code>docker pull {image}
 </code></pre>
+<p data-line="130"><code>docker run</code> lance une nouvelle instance de l'image, si on veut juste relancer un container déjà initialisé, il faut faire <code>docker start</code> puis <code>docker exec</code></p>
+<h3 data-line="132" id="Dockerfile">Dockerfile</h3>
+<p data-line="134">Il s'agit d'un fichier d'instruction d'installation d'un container qui doit respecter les bonnes pratiques</p>
+<ul>
+<li>il doit etre le plus éphémère possible</li>
+<li>n'installer que le necessaure</li>
+<li>un container =  un processus</li>
+<li>limiter le nombre de couche</li>
+<li>les arguments multi ligne doivent être trier par ordre alphabétique</li>
+</ul>
+<p data-line="142"><code>FROM</code> est la premiere instruction d'un dockerfile, toutes les images derivant d'une image originale</p>
+<p data-line="144"><code>ARG {argument_name}</code> permet de spécifié le nom d'un argument par exemple :</p>
+<pre><code>ARG PRJCT_NAME
+</code></pre>
+<p data-line="148">RUN, CMD, ENTRYPOINT peuvent être définie selon une forme exec ou shell</p>
+<p data-line="150"><code>RUN</code> correspond à l'installation</p>
+<pre><code>RUN apt-get install ...
+</code></pre>
+<p data-line="154"><code>CMD</code> spécifie la commande qui sera executée lors du démarrage de l'image</p>
+<ul>
+<li>elle ne peut etre utilisée qu'une seule fois</li>
+<li>si il y en a plusieurs, seul le dernier est utilisé</li>
+<li>la commande et les paramètres peuvent etre surchargé par l'instruction</li>
+</ul>
+<p data-line="160"><code>EXPOSE</code> permet d'indiquer à docker que le container ecoute sur les ports indiqués</p>
+<p data-line="162"><code>COPY</code> copie des fichiers ou des dossiers locaux à l'interieur du container</p>
+<p data-line="164">il ne peut selectionner que des fichiers du dossier courant ou enfant donc pas de <code>../</code></p>
+<p data-line="166">pas possible d'utiliser des regex (*.php, ?, …)</p>
+<p data-line="168">le destinataire doit finir par un / si c'est un dossier ou plusieurs fichiers vont y être copiés</p>
+<h5 data-line="170" id="Docker-linting">Docker linting</h5>
+<p data-line="171"><code>docker run --rm -i hadolint/hadolint &amp;lt; [your-dockerfile]</code><br />
+<a href="https://github.com/hadolint/hadolint/wiki">Documentation</a></p>
+<h3 data-line="175" id="docker-compose">docker-compose</h3>
+<p data-line="177">prend un fichier docker-compose.yaml</p>
+<p data-line="179"><code>docker-compose build</code> pour builder les images de services pour lesquelles il a été spécifié un docker file<br />
+<code>docker-compose up</code> pour lancer tous les containers</p>
 </body>
               </html>
