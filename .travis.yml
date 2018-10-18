@@ -1,0 +1,10 @@
+language: php
+php:
+- 7.2
+deploy:
+  provider: heroku
+  api_key:
+    secure: UglQezTe52rPKp0ipD5zFTSu4FPUDy+1U8L+NQ6TEVXa62xv19b0kiZDAzjg45Cduaj3NSR2DkvSWuSxeWyilQBCEFf0G3TI2YApC3vVg2s2j0ilkLY7MdPR7Jdx8vueSY6uYv4qQvB+Kc788CU/80aqaUKqtw1CAgigqYhnJ6FcIF5tdX/EGYiwPOrjyN5JN0I0NiVgmFpNmjMYgcYS59lXBnvVp1b6BeB8A1e+nzlODiHMYXbvjOLlCqWHn9Q8Ui3sIA/JlpRdaBQSnhfgEYfazppCEnUwaOd1juAvR6xegrX+YWrF5z4Vtr+njpJYXSRCiS/gTICBZMBiD26OltOpa7XfmfUp7IX3cGheXYG084h4nWxBdbIbSe+fxf0Z+EgD//l0O/ykeLm19Q017NctxuRSOqSQdemOzhgjL/67UGfUQi3AJ/o5zBrHmE+NWg39GlzafShsBVc2A/4DJYRmitfCrS8TOErBbqmbLJL6QDHVBwwPvbYxZfT0SnhQxxFZuZ3niar91Ki4XyoceIlIfVOoLz/0w+klV6rdWRGvhKZrQ4PLxPZgdKYJrqXpXE6jcv2D38fOCRrnuIFXkoJOSUlYXErMBRQYnJyr5QW3o9S5T7g8qUalMUBCe2F6T87cYaEg8zdj99ygaMnQ/KeODErOIl5/e40Z5NbHcqA=
+  app: ESGI-cours
+  on:
+    repo: tcrepy/ESGI-cours
