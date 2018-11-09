@@ -5,18 +5,18 @@
                    <style id="style">
 @font-face {
   font-family: 'Lato';
-  src: url('file:///C:/Users/tangu/AppData/Local/boost/app-0.11.9/resources/app/resources/fonts/Lato-Regular.woff2') format('woff2'), /* Modern Browsers */
-       url('file:///C:/Users/tangu/AppData/Local/boost/app-0.11.9/resources/app/resources/fonts/Lato-Regular.woff') format('woff'), /* Modern Browsers */
-       url('file:///C:/Users/tangu/AppData/Local/boost/app-0.11.9/resources/app/resources/fonts/Lato-Regular.ttf') format('truetype');
+  src: url('file:///C:/Users/tangu/AppData/Local/boost/app-0.11.10/resources/app/resources/fonts/Lato-Regular.woff2') format('woff2'), /* Modern Browsers */
+       url('file:///C:/Users/tangu/AppData/Local/boost/app-0.11.10/resources/app/resources/fonts/Lato-Regular.woff') format('woff'), /* Modern Browsers */
+       url('file:///C:/Users/tangu/AppData/Local/boost/app-0.11.10/resources/app/resources/fonts/Lato-Regular.ttf') format('truetype');
   font-style: normal;
   font-weight: normal;
   text-rendering: optimizeLegibility;
 }
 @font-face {
   font-family: 'Lato';
-  src: url('file:///C:/Users/tangu/AppData/Local/boost/app-0.11.9/resources/app/resources/fonts/Lato-Black.woff2') format('woff2'), /* Modern Browsers */
-       url('file:///C:/Users/tangu/AppData/Local/boost/app-0.11.9/resources/app/resources/fonts/Lato-Black.woff') format('woff'), /* Modern Browsers */
-       url('file:///C:/Users/tangu/AppData/Local/boost/app-0.11.9/resources/app/resources/fonts/Lato-Black.ttf') format('truetype');
+  src: url('file:///C:/Users/tangu/AppData/Local/boost/app-0.11.10/resources/app/resources/fonts/Lato-Black.woff2') format('woff2'), /* Modern Browsers */
+       url('file:///C:/Users/tangu/AppData/Local/boost/app-0.11.10/resources/app/resources/fonts/Lato-Black.woff') format('woff'), /* Modern Browsers */
+       url('file:///C:/Users/tangu/AppData/Local/boost/app-0.11.10/resources/app/resources/fonts/Lato-Black.ttf') format('truetype');
   font-style: normal;
   font-weight: 700;
   text-rendering: optimizeLegibility;
@@ -27,9 +27,9 @@
   font-weight: 400;
   src: local('Material Icons'),
        local('MaterialIcons-Regular'),
-       url('file:///C:/Users/tangu/AppData/Local/boost/app-0.11.9/resources/app/resources/fonts/MaterialIcons-Regular.woff2') format('woff2'),
-       url('file:///C:/Users/tangu/AppData/Local/boost/app-0.11.9/resources/app/resources/fonts/MaterialIcons-Regular.woff') format('woff'),
-       url('file:///C:/Users/tangu/AppData/Local/boost/app-0.11.9/resources/app/resources/fonts/MaterialIcons-Regular.ttf') format('truetype');
+       url('file:///C:/Users/tangu/AppData/Local/boost/app-0.11.10/resources/app/resources/fonts/MaterialIcons-Regular.woff2') format('woff2'),
+       url('file:///C:/Users/tangu/AppData/Local/boost/app-0.11.10/resources/app/resources/fonts/MaterialIcons-Regular.woff') format('woff'),
+       url('file:///C:/Users/tangu/AppData/Local/boost/app-0.11.10/resources/app/resources/fonts/MaterialIcons-Regular.ttf') format('truetype');
 }
 
 html,
@@ -164,6 +164,12 @@ li label.taskListItem {
   margin-left: -1.8em;
 }
 li label.taskListItem.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+li.taskListItem.checked {
   text-decoration: line-through;
   opacity: 0.5;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
@@ -435,6 +441,7 @@ table {
   display: block;
   width: 100%;
   margin: 0 0 1em;
+  overflow-x: auto;
 }
 table thead tr {
   background-color: #fff;
@@ -713,6 +720,35 @@ body[data-theme="monokai"] table tbody td:last-child {
 body[data-theme="monokai"] kbd {
   background-color: #1e2127;
 }
+body[data-theme="dracula"] {
+  color: #f8f8f2;
+  border-color: #444b59;
+  background-color: #282a36;
+}
+body[data-theme="dracula"] table thead tr {
+  background-color: #242631;
+}
+body[data-theme="dracula"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="dracula"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dracula"] table tbody tr:nth-child(2n + 1) {
+  background-color: #282a36;
+}
+body[data-theme="dracula"] table tbody tr:nth-child(2n) {
+  background-color: #242631;
+}
+body[data-theme="dracula"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="dracula"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dracula"] kbd {
+  background-color: #1e2127;
+}
 /*# sourceMappingURL=browser/components/markdown.css.map */
 
 body {
@@ -781,7 +817,9 @@ body p {
                  </head>
                  <body><h2 data-line="0" id="Cours-ESGI">Cours ESGI</h2>
 <ul>
-<li><a href="http://tanguycrepy.fr/ESGI-cours/env-travail-col">environnement de travail collaboratif</a></li>
+<li><a href="./env-travail-col/">environnement de travail collaboratif</a></li>
+<li><a href="./Gestion-projet/">gestion de projet</a></li>
+<li><a href="./Symfony/">Symfony</a></li>
 </ul>
 </body>
               </html>
